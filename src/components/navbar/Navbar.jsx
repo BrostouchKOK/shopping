@@ -3,6 +3,8 @@ import Logo from "../../assets/logo.png";
 import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
 import DarkMode from "./DarkMode";
+import { DropdownLinks, Menu } from "../../constant/Menu";
+import { FaCaretDown } from "react-icons/fa";
 
 const Navbar = () => {
   return (
@@ -53,13 +55,49 @@ const Navbar = () => {
               <FaCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer" />
             </button>
             {/* DarkMode Switch */}
-            <DarkMode/>
+            <DarkMode />
           </div>
           {/* order button */}
         </div>
       </div>
       {/* lover navbar */}
-      <div></div>
+      <div className="flex justify-center">
+        <ul className="sm:flex hidden items-center gap-4">
+          {Menu.map((data) => (
+            <li key={data.id}>
+              <a
+                href={data.link}
+                className="inline-block px-4 hover:text-primary duration-200"
+              >
+                {data.name}
+              </a>
+            </li>
+          ))}
+          {/* simple dropdown and links */}
+          <li className="group relative cursor-pointer">
+            <a href="" className="flex items-center gap-[2px] py-2">
+              Trending Products
+              <span>
+                <FaCaretDown
+                  className="transition-all 
+                duration-200 group-hover:rotate-180"
+                />
+              </span>
+            </a>
+            <div 
+              className="absolute z-[9999] hidden group-hover:block 
+              rounded-md bg-white p-2 text-black shadow-md">
+              <ul>
+                {DropdownLinks.map((data) => (
+                  <li key={data.id}>
+                    <a href={data.link} className="inline-block w-full rounded-md p-2 hover:bg-primary/20">{data.name}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
