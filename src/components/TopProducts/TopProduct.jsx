@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa6";
 
 const TopProduct = () => {
   return (
-    <div className="pb-5">
+    <div>
       <div className="container">
         {/* header section */}
         <div className="text-left mb-24">
