@@ -2,7 +2,7 @@ import React from "react";
 import { TopProductData } from "../../constant/productData";
 import { FaStar } from "react-icons/fa6";
 
-const TopProduct = () => {
+const TopProduct = ({handleOrderPopup}) => {
   return (
     <div>
       <div className="container">
@@ -58,6 +58,7 @@ const TopProduct = () => {
                   {data.description}
                 </p>
                 <button
+                  onClick={handleOrderPopup}
                   className="bg-primary hover:scale-105
                     duration-300 text-white px-4 py-1 rounded-full
                     mt-4 group-hover:bg-white group-hover:text-primary"

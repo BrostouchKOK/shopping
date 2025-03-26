@@ -6,7 +6,7 @@ import DarkMode from "./DarkMode";
 import { DropdownLinks, Menu } from "../../constant/Menu";
 import { FaCaretDown } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({handleOrderPopup}) => {
   return (
     <div
       className="shadow-md bg-white 
@@ -41,7 +41,7 @@ const Navbar = () => {
               />
             </div>
             <button
-              onClick={() => alert("Ordering not avalaiable yet!")}
+              onClick={() => handleOrderPopup()}
               className="bg-gradient-to-r from-primary to-secondary
             transition-all duration-200 px-4 py-1 rounded-full
             text-white flex items-center gap-3 group"
@@ -61,7 +61,7 @@ const Navbar = () => {
         </div>
       </div>
       {/* lover navbar */}
-      <div className="flex justify-center">
+      <div data-aos="zoom-in" className="flex justify-center">
         <ul className="sm:flex hidden items-center gap-4">
           {Menu.map((data) => (
             <li key={data.id}>

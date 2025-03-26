@@ -1,7 +1,13 @@
 import React from "react";
 import FooterLogo from "../../assets/logo.png";
 import { FooterBanner, FooterLinks } from "../../constant/footerList";
-import { FaFacebook, FaInstagram, FaLinkedin, FaLocationArrow, FaMobileAlt } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaLocationArrow,
+  FaMobileAlt,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -59,14 +65,14 @@ const Footer = () => {
                 </a>
               </div>
               <div className="mt-6">
-                  <div className="flex gap-3 items-center">
-                    <FaLocationArrow/>
-                    <p>#KPT St, 123 Cambodia</p>
-                  </div>
-                  <div className="flex gap-3 items-center mt-3">
-                    <FaMobileAlt/>
-                    <p>+855 96 96 34 904</p>
-                  </div>
+                <div className="flex gap-3 items-center">
+                  <FaLocationArrow />
+                  <p>#KPT St, 123 Cambodia</p>
+                </div>
+                <div className="flex gap-3 items-center mt-3">
+                  <FaMobileAlt />
+                  <p>+855 96 96 34 904</p>
+                </div>
               </div>
             </div>
           </div>
