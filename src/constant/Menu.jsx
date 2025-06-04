@@ -24,11 +24,6 @@ const Menu = [
         name: "Electronics",
         link: "/#",
     },
-    {
-        id: 6,
-        name: "My TESTING",
-        link: "/#",
-    },
 ];
 
 const DropdownLinks = [
